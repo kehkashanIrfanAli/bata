@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <label>Name</label>
+    <input type="text" id="name" placeholder="Enter your name"><br>
+    <label>Contact No</label>
+    <input type="text" id="no" placeholder="Enter your number"><br>
+    <label>Password</label>
+    <input type="text" id="password" placeholder="Enter your password"><br>
+    <label>Confirm Password</label>
+    <input type="text" id="confirmpassword" placeholder="Enter your confirm password"><br>
+    <button onclick="submitdata()">Submit</button>
+
+    <script>
+        function submitdata() {
+          
+            let a = document.getElementById("name").value;
+            let b = document.getElementById("no").value;
+            let c = document.getElementById("password").value;
+            let d = document.getElementById("confirmpassword").value;
+            
+          
+            if (a == "" || b == "" || c =="" || d == "") {
+                alert("Please fill all fields");
+            }
+            else if( b.length > 11){
+                alert("plz enter correct number")
+            }
+
+            else if(c != d){
+                alert("plz enter same password")
+            }
+           
+           
+        }
+    </script>
+</body>
+</html>
